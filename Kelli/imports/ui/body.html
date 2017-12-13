@@ -1,0 +1,31 @@
+<body>
+<div class="container">
+
+    <h1>Citizens Science</h1>
+
+    <form class="new-task">
+        <input type="text" name="text" placeholder="Type gauge name" class=" gaugename"/>
+        <button class = "submit">Submit</button><br><br>
+        <input type="file" name="productImage" id="productImage">
+        <input type="submit" name="submit" value="submit">
+        <h2>Submitted Data and Images</h2>
+
+
+    </form>
+    <ul>
+        {{#each submitted_data}}
+        {{> data}}
+        {{/each}}
+    </ul>
+</div>
+<div>
+
+</div>
+</body>
+<template name="data">
+    <li>{{text}}</li>
+</template>
+
+<template name = "myform">
+    <img id = "fromBase64" src = "data:image/png;base64,">
+</template>
